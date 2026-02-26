@@ -1,0 +1,502 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+	<title>Ergebnisse & Referenzen – Strabe Strategische Beratung</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--crimson: #7a1525;
+			--crimson-dark: #4d0d17;
+			--crimson-light: #9e2030;
+			--silver: #c8cdd6;
+			--silver-light: #e8eaed;
+			--off-white: #f5f2ee;
+			--dark: #1a1014;
+		}
+		* { box-sizing: border-box; }
+		body { font-family: 'DM Sans', sans-serif; background: var(--off-white); color: var(--dark); }
+
+		/* Header */
+		#header.wrapper {
+			background: linear-gradient(135deg, var(--crimson-dark) 0%, var(--crimson) 60%, #9e1a2a 100%);
+		}
+		#header.wrapper::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(ellipse at 70% 50%, rgba(200,205,214,0.08) 0%, transparent 60%);
+			pointer-events: none;
+		}
+		#header { position: relative; }
+						#header #logo {
+			padding: 1.8rem 3rem 1.2rem;
+		}
+		#header #logo h1 {
+			font-family: 'Cinzel', serif;
+			font-size: 3rem;
+			font-weight: 900;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			margin: 0;
+			line-height: 1;
+			background: linear-gradient(
+				180deg,
+				#ffffff   0%,
+				#e8eaed  18%,
+				#c0c6d0  35%,
+				#f2f4f6  52%,
+				#8a929e  68%,
+				#c8cdd6  82%,
+				#eaedf0 100%
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			filter:
+				drop-shadow(3px 4px 0px rgba(0,0,0,0.65))
+				drop-shadow(1px 1px 0px rgba(0,0,0,0.5))
+				drop-shadow(0 6px 14px rgba(0,0,0,0.45));
+		}
+		#header #logo h1 a {
+			text-decoration: none;
+			border: none;
+		}
+		#header #logo p {
+			font-family: 'DM Sans', sans-serif;
+			font-size: 0.75rem;
+			letter-spacing: 0.28em;
+			text-transform: uppercase;
+			color: rgba(200,205,214,0.55);
+			margin: 0.5rem 0 0 0;
+			font-weight: 300;
+		}
+		#nav {
+			background: rgba(77, 13, 23, 0.65);
+			border-top: 1px solid rgba(200,205,214,0.18);
+			border-bottom: 1px solid rgba(200,205,214,0.1);
+		}
+		#nav > ul > li > a {
+			font-size: 0.78rem;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: var(--silver-light) !important;
+			padding: 1.1rem 1.4rem !important;
+			border: none !important;
+			transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+		}
+		#nav > ul > li.current > a,
+		#nav > ul > li > a:hover {
+			color: #fff !important;
+			background: rgba(200, 205, 214, 0.14) !important;
+			box-shadow: inset 0 -2px 0 var(--silver) !important;
+		}
+
+		/* Section titles */
+		.title {
+			font-family: 'Cormorant Garamond', serif !important;
+			font-size: 0.8rem !important;
+			letter-spacing: 0.3em !important;
+			text-transform: uppercase !important;
+			color: var(--crimson) !important;
+		}
+
+		/* Main content area */
+		#main.wrapper.style2 { background: var(--off-white); }
+		#main .title { color: var(--crimson) !important; }
+
+		/* Article/Post */
+		.post header.style1 h2 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 2.2rem;
+			font-weight: 600;
+			color: var(--crimson-dark);
+			line-height: 1.3;
+		}
+		.post header.style1 p { color: #888; font-size: 0.88rem; letter-spacing: 0.08em; }
+		.post p { color: #444; line-height: 1.85; font-size: 0.95rem; }
+
+		/* Case study cards */
+		.case-study {
+			background: #fff;
+			border: 1px solid rgba(122,21,37,0.1);
+			border-left: 4px solid var(--crimson);
+			padding: 2rem;
+			margin-bottom: 2rem;
+			border-radius: 2px;
+		}
+		.case-study .cs-meta {
+			font-size: 0.72rem;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: var(--crimson);
+			margin-bottom: 0.7rem;
+		}
+		.case-study h3 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: var(--crimson-dark);
+			margin: 0 0 0.8rem;
+		}
+		.case-study p { color: #555; font-size: 0.92rem; line-height: 1.75; margin-bottom: 0.8rem; }
+		.cs-result {
+			display: inline-block;
+			background: var(--crimson);
+			color: #fff;
+			font-size: 0.78rem;
+			letter-spacing: 0.1em;
+			padding: 0.3rem 0.9rem;
+			border-radius: 20px;
+		}
+
+		/* Testimonials */
+		.testimonial {
+			background: var(--dark);
+			padding: 2rem 2.2rem;
+			margin-bottom: 1.5rem;
+			border-radius: 2px;
+			position: relative;
+		}
+		.testimonial::before {
+			content: '"';
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 5rem;
+			color: var(--crimson);
+			position: absolute;
+			top: -0.5rem;
+			left: 1rem;
+			line-height: 1;
+			opacity: 0.5;
+		}
+		.testimonial p {
+			color: rgba(200,205,214,0.85) !important;
+			font-size: 0.9rem;
+			line-height: 1.75;
+			margin-bottom: 1rem;
+			font-style: italic;
+		}
+		.testimonial .t-author {
+			font-size: 0.75rem;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			color: var(--crimson-light) !important;
+		}
+
+		/* Sidebar */
+		#sidebar .box {
+			background: #fff;
+			border: 1px solid rgba(122,21,37,0.1);
+			border-top: 3px solid var(--crimson);
+			padding: 1.8rem;
+			margin-bottom: 1.5rem;
+			border-radius: 2px;
+		}
+		#sidebar .box header h2 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.25rem;
+			color: var(--crimson-dark);
+			margin-bottom: 0.8rem;
+		}
+		#sidebar .box p { font-size: 0.88rem; color: #666; line-height: 1.7; }
+
+		.metric-box {
+			text-align: center;
+			padding: 1.2rem;
+			border-bottom: 1px solid rgba(122,21,37,0.08);
+		}
+		.metric-box:last-child { border-bottom: none; }
+		.metric-num {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 2.4rem;
+			font-weight: 700;
+			color: var(--crimson);
+			line-height: 1;
+		}
+		.metric-label { font-size: 0.75rem; color: #888; margin-top: 0.3rem; letter-spacing: 0.08em; }
+
+		/* Highlights/USP */
+		#highlights.wrapper.style3 {
+			background: linear-gradient(135deg, var(--dark) 0%, #2a0a12 100%);
+		}
+		#highlights .title { color: rgba(200,205,214,0.45) !important; border-color: rgba(200,205,214,0.12) !important; }
+		#highlights .title::before, #highlights .title::after { border-color: rgba(200,205,214,0.12) !important; }
+		.highlight {
+			background: rgba(255,255,255,0.04) !important;
+			border: 1px solid rgba(200,205,214,0.12) !important;
+			border-top: 3px solid var(--crimson) !important;
+			padding: 2.5rem 2rem !important;
+			border-radius: 2px;
+		}
+		.highlight h3 {
+			font-family: 'Cormorant Garamond', serif !important;
+			font-size: 1.4rem !important;
+			color: var(--silver-light) !important;
+		}
+		.highlight p { color: rgba(200,205,214,0.65) !important; line-height: 1.75; font-size: 0.9rem; }
+		.highlight .button { color: var(--silver-light) !important; border-color: rgba(200,205,214,0.3) !important; font-size: 0.75rem !important; letter-spacing: 0.15em; }
+
+		/* Footer */
+		#footer.wrapper { background: var(--dark); }
+		#footer .title { color: rgba(200,205,214,0.45) !important; border-color: rgba(200,205,214,0.12) !important; }
+		#footer .title::before, #footer .title::after { border-color: rgba(200,205,214,0.12) !important; }
+		#footer input[type="text"], #footer input[type="email"], #footer textarea {
+			background: rgba(255,255,255,0.05) !important;
+			border: 1px solid rgba(200,205,214,0.2) !important;
+			color: var(--silver-light) !important;
+		}
+		#footer input::placeholder, #footer textarea::placeholder { color: rgba(200,205,214,0.35) !important; }
+		#footer input[type="submit"].style1 { background: var(--crimson) !important; border: none !important; color: #fff !important; }
+		.feature-list.small h3 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--silver); }
+		.feature-list.small p, .feature-list.small a { color: rgba(200,205,214,0.6) !important; font-size: 0.88rem; }
+		#copyright { border-top: 1px solid rgba(200,205,214,0.1) !important; }
+		#copyright li { color: rgba(200,205,214,0.35) !important; font-size: 0.78rem; }
+		#copyright a { color: rgba(200,205,214,0.5) !important; }
+
+		.button.style1 {
+			background: var(--crimson) !important; border: none !important; color: #fff !important;
+			font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; border-radius: 2px !important;
+		}
+	</style>
+</head>
+<body class="right-sidebar is-preload">
+<div id="page-wrapper">
+
+	<!-- Header -->
+	<section id="header" class="wrapper">
+		<div id="logo">
+			<h1><a href="index.html">STRABE</a></h1>
+			<p>Strategische Beratung · KI-gestützt · Ergebnisorientiert</p>
+		</div>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Startseite</a></li>
+				<li class="current"><a href="right-sidebar.html">Ergebnisse</a></li>
+				<li><a href="left-sidebar.html">Methodik</a></li>
+				<li><a href="no-sidebar.html">KI-Tools</a></li>
+				<li><a href="index.html#kontakt">Kontakt</a></li>
+			</ul>
+		</nav>
+	</section>
+
+	<!-- Main -->
+	<section id="main" class="wrapper style2">
+		<div class="title">Ergebnisse & Referenzen</div>
+		<div class="container">
+			<div class="row gtr-150">
+				<div class="col-8 col-12-medium">
+					<!-- Content -->
+					<div id="content">
+						<article class="box post">
+							<header class="style1">
+								<h2>Was unsere Kunden erreicht haben</h2>
+								<p>Echte Ergebnisse · Reale Unternehmen · Messbare Wirkung</p>
+							</header>
+
+							<p>
+								Strabe wurde aus einer einfachen Überzeugung heraus gegründet: Beratung muss sich in Zahlen zeigen. Nicht in PowerPoint-Folien, nicht in Konzeptpapieren — sondern in echtem Umsatz, klareren Entscheidungen und nachhaltigem Wachstum. Die folgenden Fallstudien zeigen, wie unsere Kunden von unserer Zusammenarbeit profitiert haben.
+							</p>
+
+							<div class="case-study">
+								<div class="cs-meta">Fallstudie · Selbständiger Unternehmensberater</div>
+								<h3>Von 4.000 € auf 12.000 € monatlich in 60 Tagen</h3>
+								<p>
+									Ein erfahrener IT-Berater stagnierte seit Monaten bei 4.000 € monatlichem Umsatz. Das Problem lag nicht an fehlenden Fähigkeiten — sondern an einem unklaren Angebot und einer falschen Preispositionierung. Im Strategie-Intensiv-Call identifizierten wir gemeinsam die drei entscheidenden Stellschrauben: Neupositionierung als Spezialist, Paketangebot statt Stundensatz und eine gezielte LinkedIn-Strategie mit KI-Unterstützung.
+								</p>
+								<p>Ergebnis nach 60 Tagen: dreifacher Monatsumsatz, weniger Arbeitsstunden, höhere Kundenzufriedenheit.</p>
+								<span class="cs-result">+200% Umsatz in 60 Tagen</span>
+							</div>
+
+							<div class="case-study">
+								<div class="cs-meta">Fallstudie · KMU · Handwerksbetrieb</div>
+								<h3>Entscheidungsprozesse halbiert, Marge um 18% gesteigert</h3>
+								<p>
+									Ein Familienbetrieb mit 22 Mitarbeitern hatte ein klassisches Problem: Entscheidungen dauerten zu lange, weil keine klaren Strukturen vorhanden waren. In der 90-Tage-Begleitung implementierten wir ein KI-gestütztes Entscheidungsframework, das Prioritäten automatisch bewertet und Handlungsempfehlungen liefert — ohne den persönlichen Charakter des Unternehmens zu verlieren.
+								</p>
+								<span class="cs-result">-50% Entscheidungszeit · +18% Marge</span>
+							</div>
+
+							<div class="case-study">
+								<div class="cs-meta">Fallstudie · Business Coach</div>
+								<h3>Launch eines neuen Premium-Angebots: 47.000 € in 30 Tagen</h3>
+								<p>
+									Eine Business Coach wollte ein High-Ticket-Gruppencoaching launchen, war aber unsicher über Pricing, Positionierung und den Verkaufsprozess. Mithilfe unserer digitalen Verkaufsvorlagen und eines maßgeschneiderten Angebotsframeworks generierte sie beim ersten Launch 47.000 € Umsatz — bei null Euro Werbebudget.
+								</p>
+								<span class="cs-result">47.000 € Launch-Umsatz ohne Werbebudget</span>
+							</div>
+						</article>
+
+						<!-- Testimonials -->
+						<div class="row gtr-150" style="margin-top:2rem;">
+							<div class="col-12">
+								<h3 style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--crimson-dark); margin-bottom:1.5rem;">Was Kunden sagen</h3>
+								<div class="testimonial">
+									<p>"Die Zusammenarbeit mit Strabe war ein Wendepunkt. Ich hatte jahrelang ein gutes Produkt, aber keine klare Strategie. In zwei Stunden haben wir mehr erarbeitet als in 6 Monaten Selbstanalyse."</p>
+									<div class="t-author">— M. K., Unternehmensberater, München</div>
+								</div>
+								<div class="testimonial">
+									<p>"Ich war skeptisch gegenüber KI-Tools — bis ich sah, wie viel Zeit ich damit spare. Strabe hat nicht einfach Tools empfohlen, sondern genau das richtige für mein Business implementiert."</p>
+									<div class="t-author">— S. B., Inhaberin, Hamburg</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-4 col-12-medium">
+					<!-- Sidebar -->
+					<div id="sidebar">
+						<section class="box">
+							<header><h2>Strabe in Zahlen</h2></header>
+							<div class="metric-box">
+								<div class="metric-num">37+</div>
+								<div class="metric-label">Erfolgreich beratene Kunden</div>
+							</div>
+							<div class="metric-box">
+								<div class="metric-num">Ø 3×</div>
+								<div class="metric-label">Umsatzsteigerung in 90 Tagen</div>
+							</div>
+							<div class="metric-box">
+								<div class="metric-num">0€</div>
+								<div class="metric-label">Risiko für Pilotkunden</div>
+							</div>
+							<div class="metric-box">
+								<div class="metric-num">24h</div>
+								<div class="metric-label">Garantierte Reaktionszeit</div>
+							</div>
+						</section>
+
+						<section class="box">
+							<header><h2>Jetzt Erstgespräch buchen</h2></header>
+							<p>In einem kostenfreien 30-Minuten-Gespräch analysieren wir Ihre größte strategische Herausforderung und zeigen, was in Ihrem Business möglich ist.</p>
+							<a href="index.html#kontakt" class="button style1">Kostenlos starten</a>
+						</section>
+
+						<section class="box">
+							<header><h2>Schneller Einstieg</h2></header>
+							<p>Nicht bereit für eine vollständige Beratung? Starten Sie mit unseren digitalen Templates — sofort anwendbar, sofort wirksam.</p>
+							<a href="no-sidebar.html" class="button style1">Templates ansehen</a>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Highlights -->
+	<section id="highlights" class="wrapper style3">
+		<div class="title">Unser Versprechen</div>
+		<div class="container">
+			<div class="row aln-center">
+				<div class="col-4 col-12-medium">
+					<section class="highlight">
+						<h3>Messbare Ergebnisse</h3>
+						<p>Jedes Projekt beginnt mit klaren KPIs. Wir definieren gemeinsam, was Erfolg bedeutet — und stellen sicher, dass wir ihn gemeinsam erreichen.</p>
+						<ul class="actions">
+							<li><a href="index.html#produkte" class="button style2">Angebote</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="col-4 col-12-medium">
+					<section class="highlight">
+						<h3>Erfolgsabhängig</h3>
+						<p>Pilotkunden zahlen teilweise oder vollständig nur bei Zielerreichung. Das ist unser Commitment: Wir profitieren, wenn Sie profitieren.</p>
+						<ul class="actions">
+							<li><a href="index.html#kontakt" class="button style2">Anfragen</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="col-4 col-12-medium">
+					<section class="highlight">
+						<h3>Langfristige Wirkung</h3>
+						<p>Wir implementieren Systeme, die ohne uns weiter funktionieren. Das Ziel ist Ihre Unabhängigkeit — nicht Ihre Abhängigkeit von Beratung.</p>
+						<ul class="actions">
+							<li><a href="left-sidebar.html" class="button style2">Methodik</a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<section id="footer" class="wrapper">
+		<div class="title">Kontakt</div>
+		<div class="container">
+			<header class="style1" style="text-align:center; margin-bottom:3rem;">
+				<h2 style="font-family:'Cormorant Garamond',serif; font-size:2rem; color:var(--silver-light);">Möchten auch Sie solche Ergebnisse?</h2>
+				<p style="color:rgba(200,205,214,0.6);">Schreiben Sie uns — das erste Gespräch ist kostenlos und unverbindlich.</p>
+			</header>
+			<div class="row">
+				<div class="col-6 col-12-medium">
+					<section>
+						<form method="post" action="#">
+							<div class="row gtr-50">
+								<div class="col-6 col-12-small">
+									<input type="text" name="name" id="contact-name" placeholder="Ihr Name" />
+								</div>
+								<div class="col-6 col-12-small">
+									<input type="text" name="email" id="contact-email" placeholder="Ihre E-Mail" />
+								</div>
+								<div class="col-12">
+									<textarea name="message" id="contact-message" placeholder="Ihre Herausforderung in einem Satz..." rows="4"></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" class="style1" value="Senden" /></li>
+										<li><input type="reset" class="style2" value="Zurücksetzen" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</section>
+				</div>
+				<div class="col-6 col-12-medium">
+					<section class="feature-list small">
+						<div class="row">
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-home">Standort</h3>
+									<p>Strabe – Strategische Beratung<br />An der Pfannenschmiede 3a<br />45549 Sprockhövel</p>
+								</section>
+							</div>
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-comment">Social</h3>
+									<p>
+										<a href="#">@strabe-beratung</a><br />
+										<a href="#">linkedin.com/strabe</a>
+									</p>
+								</section>
+							</div>
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-envelope">E-Mail</h3>
+									<p><a href="/cdn-cgi/l/email-protection#f39a9d959cb3808781929196dd9796"><span class="__cf_email__" data-cfemail="2d44434b426d5e595f4c4f48034948">[email&#160;protected]</span></a></p>
+								</section>
+							</div>
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-phone">Reaktionszeit</h3>
+									<p>Innerhalb von 24 Stunden</p>
+								</section>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div id="copyright">
+				<ul>
+					<li>&copy; 2025 Jan Natrup · Strabe – Strategische Beratung</li>
+					<li><a href="impressum.html">Impressum</a></li>
+					<li><a href="#">Datenschutz</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jque

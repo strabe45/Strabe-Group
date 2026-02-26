@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+	<title>Impressum – Strabe Strategische Beratung</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--crimson: #7a1525;
+			--crimson-dark: #4d0d17;
+			--crimson-light: #9e2030;
+			--silver: #c8cdd6;
+			--silver-light: #e8eaed;
+			--off-white: #f5f2ee;
+			--dark: #1a1014;
+		}
+		* { box-sizing: border-box; }
+		body { font-family: 'DM Sans', sans-serif; background: var(--off-white); color: var(--dark); }
+
+		/* Header */
+		#header.wrapper {
+			background: linear-gradient(135deg, var(--crimson-dark) 0%, var(--crimson) 60%, #9e1a2a 100%);
+			padding: 0; position: relative; overflow: hidden;
+		}
+		#header.wrapper::before {
+			content: ''; position: absolute; inset: 0;
+			background: radial-gradient(ellipse at 70% 50%, rgba(200,205,214,0.08) 0%, transparent 60%);
+			pointer-events: none;
+		}
+		#header #logo { padding: 1.8rem 3rem 1.2rem; }
+		#header #logo h1 {
+			font-family: 'Cinzel', serif;
+			font-size: 3rem; font-weight: 900;
+			letter-spacing: 0.18em; text-transform: uppercase;
+			margin: 0; line-height: 1;
+			background: linear-gradient(180deg,#ffffff 0%,#e8eaed 18%,#c0c6d0 35%,#f2f4f6 52%,#8a929e 68%,#c8cdd6 82%,#eaedf0 100%);
+			-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+			filter: drop-shadow(3px 4px 0px rgba(0,0,0,0.65)) drop-shadow(1px 1px 0px rgba(0,0,0,0.5)) drop-shadow(0 6px 14px rgba(0,0,0,0.45));
+		}
+		#header #logo h1 a { text-decoration: none; border: none; }
+		#header #logo p {
+			font-family: 'DM Sans', sans-serif; font-size: 0.75rem;
+			letter-spacing: 0.28em; text-transform: uppercase;
+			color: rgba(200,205,214,0.55); margin: 0.5rem 0 0; font-weight: 300;
+		}
+		#nav {
+			background: rgba(77, 13, 23, 0.65);
+			border-top: 1px solid rgba(200,205,214,0.18);
+			border-bottom: 1px solid rgba(200,205,214,0.1);
+		}
+		#nav > ul > li > a {
+			font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+			color: var(--silver-light) !important; padding: 1.1rem 1.4rem !important;
+			border: none !important; transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+		}
+		#nav > ul > li.current > a, #nav > ul > li > a:hover {
+			color: #fff !important;
+			background: rgba(200, 205, 214, 0.14) !important;
+			box-shadow: inset 0 -2px 0 var(--silver) !important;
+		}
+
+		/* Main content */
+		#main.wrapper.style2 { background: var(--off-white); padding: 5rem 3rem; }
+		.title {
+			font-family: 'Cormorant Garamond', serif !important;
+			font-size: 0.8rem !important; letter-spacing: 0.3em !important;
+			text-transform: uppercase !important; color: var(--crimson) !important;
+		}
+
+		.impressum-container {
+			max-width: 760px;
+			margin: 0 auto;
+		}
+		.impressum-container h2 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 2.4rem; font-weight: 600;
+			color: var(--crimson-dark); margin: 0 0 2.5rem;
+		}
+		.impressum-block {
+			background: #fff;
+			border: 1px solid rgba(122,21,37,0.1);
+			border-left: 4px solid var(--crimson);
+			padding: 2rem 2.2rem;
+			margin-bottom: 1.5rem;
+			border-radius: 2px;
+		}
+		.impressum-block h3 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.15rem; font-weight: 600;
+			color: var(--crimson-dark);
+			margin: 0 0 1rem;
+			letter-spacing: 0.04em;
+		}
+		.impressum-block p {
+			font-size: 0.93rem; color: #444;
+			line-height: 1.85; margin: 0 0 0.5rem;
+		}
+		.impressum-block p:last-child { margin: 0; }
+		.impressum-block a { color: var(--crimson); text-decoration: none; }
+		.impressum-block a:hover { text-decoration: underline; }
+
+		.legal-note {
+			font-size: 0.82rem; color: #888;
+			line-height: 1.75; margin-top: 3rem;
+			padding-top: 2rem;
+			border-top: 1px solid rgba(122,21,37,0.1);
+		}
+
+		/* Footer */
+		#footer.wrapper { background: var(--dark); padding: 4rem 3rem 2.5rem; }
+		#footer .title { color: rgba(200,205,214,0.45) !important; border-color: rgba(200,205,214,0.12) !important; }
+		#footer .title::before, #footer .title::after { border-color: rgba(200,205,214,0.12) !important; }
+		.feature-list.small h3 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--silver); }
+		.feature-list.small p, .feature-list.small a { color: rgba(200,205,214,0.6) !important; font-size: 0.88rem; }
+		.feature-list.small a:hover { color: var(--silver-light) !important; }
+		#copyright { border-top: 1px solid rgba(200,205,214,0.1) !important; }
+		#copyright li { color: rgba(200,205,214,0.35) !important; font-size: 0.78rem; }
+		#copyright a { color: rgba(200,205,214,0.5) !important; }
+	</style>
+</head>
+<body class="no-sidebar is-preload">
+<div id="page-wrapper">
+
+	<!-- Header -->
+	<section id="header" class="wrapper">
+		<div id="logo">
+			<h1><a href="index.html">STRABE</a></h1>
+			<p>Strategische Beratung · KI-gestützt · Ergebnisorientiert</p>
+		</div>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Startseite</a></li>
+				<li><a href="right-sidebar.html">Ergebnisse</a></li>
+				<li><a href="left-sidebar.html">Methodik</a></li>
+				<li><a href="no-sidebar.html">KI-Tools</a></li>
+				<li><a href="index.html#kontakt">Kontakt</a></li>
+			</ul>
+		</nav>
+	</section>
+
+	<!-- Main -->
+	<div id="main" class="wrapper style2">
+		<div class="title">Rechtliches</div>
+		<div class="container">
+			<div class="impressum-container">
+
+				<h2>Impressum</h2>
+
+				<div class="impressum-block">
+					<h3>Angaben gemäß § 5 TMG</h3>
+					<p>
+						<strong>Jan Natrup</strong><br />
+						Strabe – Strategische Beratung<br />
+						An der Pfannenschmiede 3a<br />
+						45549 Sprockhövel
+					</p>
+				</div>
+
+				<div class="impressum-block">
+					<h3>Kontakt</h3>
+					<p>
+						E-Mail: <a href="mailto:Strabe@mein.gmx">Strabe@mein.gmx</a>
+					</p>
+				</div>
+
+				<div class="impressum-block">
+					<h3>Zuständiges Finanzamt</h3>
+					<p>Finanzamt Hattingen</p>
+				</div>
+
+				<div class="impressum-block">
+					<h3>Berufsbezeichnung & Berufsrecht</h3>
+					<p>
+						Unternehmensberater / Strategische Beratung<br />
+						Tätigkeitsland: Bundesrepublik Deutschland
+					</p>
+				</div>
+
+				<div class="impressum-block">
+					<h3>Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)</h3>
+					<p>
+						Jan Natrup<br />
+						An der Pfannenschmiede 3a<br />
+						45549 Sprockhövel
+					</p>
+				</div>
+
+				<div class="impressum-block">
+					<h3>Streitschlichtung</h3>
+					<p>
+						Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+						<a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>
+					</p>
+					<p>
+						Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+						Verbraucherschlichtungsstelle teilzunehmen.
+					</p>
+				</div>
+
+				<div class="impressum-block">
+					<h3>Haftung für Inhalte</h3>
+					<p>
+						Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den
+						allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+						verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
+						zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+					</p>
+					<p>
+						Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
+						Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
+						Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
+						Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+					</p>
+				</div>
+
+				<div class="impressum-block">
+					<h3>Haftung für Links</h3>
+					<p>
+						Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+						Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
+						verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+					</p>
+				</div>
+
+				<div class="impressum-block">
+					<h3>Urheberrecht</h3>
+					<p>
+						Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+						Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb
+						der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
+						Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch
+						gestattet.
+					</p>
+				</div>
+
+				<p class="legal-note">
+					Stand: 2025 · Jan Natrup · Strabe – Strategische Beratung · Sprockhövel
+				</p>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<section id="footer" class="wrapper">
+		<div class="title">Kontakt</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-12-medium">
+					<section class="feature-list small">
+						<div class="row">
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-home">Anschrift</h3>
+									<p>
+										Jan Natrup · Strabe<br />
+										An der Pfannenschmiede 3a<br />
+										45549 Sprockhövel
+									</p>
+								</section>
+							</div>
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-envelope">E-Mail</h3>
+									<p><a href="mailto:Strabe@mein.gmx">Strabe@mein.gmx</a></p>
+								</section>
+							</div>
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-comment">Social</h3>
+									<p>
+										<a href="#">linkedin.com/strabe</a><br />
+										<a href="#">@strabe-beratung</a>
+									</p>
+								</section>
+							</div>
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-clock">Reaktionszeit</h3>
+									<p>Innerhalb von 24 Stunden</p>
+								</section>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div id="copyright">
+				<ul>
+					<li>&copy; 2025 Jan Natrup · Strabe – Strategische Beratung</li>
+					<li><a href="impressum.html">Impressum</a></li>
+					<li><a href="#">Datenschutz</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
