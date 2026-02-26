@@ -1,0 +1,726 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+	<title>Über mich – Jan Natrup · Strabe Strategische Beratung</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--crimson: #7a1525;
+			--crimson-dark: #4d0d17;
+			--crimson-light: #9e2030;
+			--silver: #c8cdd6;
+			--silver-light: #e8eaed;
+			--off-white: #f5f2ee;
+			--dark: #1a1014;
+		}
+		* { box-sizing: border-box; }
+		body { font-family: 'DM Sans', sans-serif; background: var(--off-white); color: var(--dark); margin: 0; }
+
+		/* ── HEADER ── */
+		#header.wrapper {
+			background: linear-gradient(135deg, var(--crimson-dark) 0%, var(--crimson) 60%, #9e1a2a 100%);
+			padding: 0; position: relative; overflow: hidden;
+		}
+		#header.wrapper::before {
+			content: ''; position: absolute; inset: 0;
+			background: radial-gradient(ellipse at 70% 50%, rgba(200,205,214,0.08) 0%, transparent 60%);
+			pointer-events: none;
+		}
+		#header #logo { padding: 1.8rem 3rem 1.2rem; }
+		#header #logo h1 {
+			font-family: 'Cinzel', serif; font-size: 3rem; font-weight: 900;
+			letter-spacing: 0.18em; text-transform: uppercase; margin: 0; line-height: 1;
+			background: linear-gradient(180deg,#ffffff 0%,#e8eaed 18%,#c0c6d0 35%,#f2f4f6 52%,#8a929e 68%,#c8cdd6 82%,#eaedf0 100%);
+			-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+			filter: drop-shadow(3px 4px 0px rgba(0,0,0,0.65)) drop-shadow(1px 1px 0px rgba(0,0,0,0.5)) drop-shadow(0 6px 14px rgba(0,0,0,0.45));
+		}
+		#header #logo h1 a { text-decoration: none; border: none; }
+		#header #logo p {
+			font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.28em;
+			text-transform: uppercase; color: rgba(200,205,214,0.55); margin: 0.5rem 0 0; font-weight: 300;
+		}
+		#nav {
+			background: rgba(77,13,23,0.65);
+			border-top: 1px solid rgba(200,205,214,0.18);
+			border-bottom: 1px solid rgba(200,205,214,0.1);
+		}
+		#nav > ul > li > a {
+			font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+			color: var(--silver-light) !important; padding: 1.1rem 1.4rem !important;
+			border: none !important; transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+		}
+		#nav > ul > li.current > a, #nav > ul > li > a:hover {
+			color: #fff !important; background: rgba(200,205,214,0.14) !important;
+			box-shadow: inset 0 -2px 0 var(--silver) !important;
+		}
+
+		/* ── HERO SECTION ── */
+		.about-hero {
+			background: linear-gradient(135deg, var(--crimson-dark) 0%, var(--crimson) 100%);
+			padding: 5rem 3rem 4rem;
+			position: relative;
+			overflow: hidden;
+		}
+		.about-hero::before {
+			content: '';
+			position: absolute; inset: 0;
+			background: radial-gradient(ellipse at 80% 50%, rgba(200,205,214,0.07) 0%, transparent 60%);
+			pointer-events: none;
+		}
+		.about-hero::after {
+			content: '';
+			position: absolute; bottom: 0; left: 0; right: 0;
+			height: 60px;
+			background: var(--off-white);
+			clip-path: ellipse(55% 100% at 50% 100%);
+		}
+		.hero-inner {
+			max-width: 1100px; margin: 0 auto;
+			display: grid; grid-template-columns: 320px 1fr;
+			gap: 4rem; align-items: center;
+			position: relative; z-index: 1;
+		}
+		.hero-photo-wrap {
+			position: relative;
+		}
+		.hero-photo {
+			width: 100%; max-width: 280px;
+			border-radius: 3px;
+			display: block;
+			box-shadow: 12px 16px 48px rgba(0,0,0,0.5);
+			position: relative; z-index: 1;
+		}
+		.hero-photo-wrap::before {
+			content: '';
+			position: absolute;
+			top: 16px; left: 16px;
+			right: -16px; bottom: -16px;
+			border: 2px solid rgba(200,205,214,0.25);
+			border-radius: 3px;
+			z-index: 0;
+		}
+		.hero-text .eyebrow {
+			font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase;
+			color: rgba(200,205,214,0.5); margin-bottom: 1rem;
+		}
+		.hero-text h1 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 3.2rem; font-weight: 300; color: #fff;
+			margin: 0 0 0.3rem; line-height: 1.1;
+		}
+		.hero-text h1 strong { font-weight: 700; }
+		.hero-text .title-role {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.3rem; font-weight: 400;
+			color: rgba(200,205,214,0.65);
+			margin: 0 0 1.8rem;
+			font-style: italic;
+		}
+		.hero-text p {
+			font-size: 1rem; color: rgba(232,234,237,0.85);
+			line-height: 1.85; margin-bottom: 1rem; max-width: 540px;
+		}
+		.hero-tags {
+			display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.8rem;
+		}
+		.hero-tag {
+			background: rgba(200,205,214,0.12);
+			border: 1px solid rgba(200,205,214,0.22);
+			color: rgba(200,205,214,0.85);
+			font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+			padding: 0.35rem 0.85rem; border-radius: 20px;
+		}
+
+		/* ── MAIN CONTENT ── */
+		.about-main {
+			max-width: 1100px; margin: 0 auto;
+			padding: 4rem 3rem 5rem;
+			display: grid;
+			grid-template-columns: 1fr 340px;
+			gap: 4rem;
+		}
+
+		/* Left column */
+		.section-label {
+			font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase;
+			color: var(--crimson); margin-bottom: 1.5rem;
+		}
+		.about-intro h2 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 2rem; font-weight: 600; color: var(--crimson-dark);
+			margin: 0 0 1.2rem; line-height: 1.3;
+		}
+		.about-intro p {
+			font-size: 0.95rem; color: #444; line-height: 1.9; margin-bottom: 1rem;
+		}
+		blockquote {
+			border-left: 4px solid var(--crimson);
+			margin: 2rem 0;
+			padding: 1rem 1.5rem;
+			background: #fff;
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.25rem; color: var(--crimson-dark); font-style: italic;
+			line-height: 1.5;
+		}
+
+		/* Timeline */
+		.timeline { margin-top: 3rem; }
+		.timeline h3 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.6rem; font-weight: 600; color: var(--crimson-dark);
+			margin: 0 0 2rem;
+		}
+		.timeline-item {
+			display: grid; grid-template-columns: 140px 1fr;
+			gap: 1.5rem; margin-bottom: 2rem; position: relative;
+		}
+		.timeline-item::before {
+			content: '';
+			position: absolute; left: 140px; top: 0; bottom: -2rem;
+			width: 1px; background: rgba(122,21,37,0.12);
+		}
+		.timeline-item:last-child::before { display: none; }
+		.t-date {
+			font-size: 0.75rem; color: var(--crimson); letter-spacing: 0.08em;
+			font-weight: 500; padding-top: 0.15rem; text-align: right;
+			padding-right: 1.5rem;
+		}
+		.t-content {
+			padding-left: 1.5rem;
+			border-left: 3px solid var(--crimson);
+			padding-bottom: 0.5rem;
+		}
+		.t-content h4 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.1rem; font-weight: 700; color: var(--crimson-dark);
+			margin: 0 0 0.2rem;
+		}
+		.t-content .t-org {
+			font-size: 0.78rem; color: var(--crimson); letter-spacing: 0.08em;
+			text-transform: uppercase; margin-bottom: 0.6rem;
+		}
+		.t-content p { font-size: 0.88rem; color: #555; line-height: 1.75; margin: 0; }
+
+		/* Right sidebar */
+		.about-sidebar { }
+		.sidebar-card {
+			background: #fff;
+			border: 1px solid rgba(122,21,37,0.1);
+			border-top: 3px solid var(--crimson);
+			padding: 1.8rem;
+			margin-bottom: 1.5rem;
+			border-radius: 2px;
+		}
+		.sidebar-card h3 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.15rem; font-weight: 700; color: var(--crimson-dark);
+			margin: 0 0 1.2rem;
+		}
+
+		/* Study grades highlight */
+		.grade-item {
+			display: flex; justify-content: space-between; align-items: center;
+			padding: 0.55rem 0;
+			border-bottom: 1px solid rgba(122,21,37,0.07);
+			font-size: 0.83rem;
+		}
+		.grade-item:last-child { border: none; }
+		.grade-item .g-subject { color: #444; }
+		.grade-item .g-grade {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.1rem; font-weight: 700;
+			color: var(--crimson);
+		}
+		.grade-item .g-grade.top { color: #1a7a25; }
+
+		/* Skills */
+		.skill-group { margin-bottom: 1.2rem; }
+		.skill-group h4 {
+			font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+			color: #aaa; margin: 0 0 0.6rem;
+		}
+		.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.skill-tag {
+			background: var(--off-white);
+			border: 1px solid rgba(122,21,37,0.15);
+			color: var(--crimson-dark);
+			font-size: 0.75rem; padding: 0.28rem 0.7rem; border-radius: 20px;
+		}
+
+		/* Languages */
+		.lang-item {
+			display: flex; justify-content: space-between;
+			padding: 0.5rem 0;
+			border-bottom: 1px solid rgba(122,21,37,0.07);
+			font-size: 0.85rem;
+		}
+		.lang-item:last-child { border: none; }
+		.lang-level { color: var(--crimson); font-size: 0.78rem; }
+
+		/* Certificate badge */
+		.cert-badge {
+			background: linear-gradient(135deg, var(--crimson-dark), var(--crimson));
+			color: #fff; padding: 1.2rem 1.5rem; border-radius: 2px; margin-bottom: 0.8rem;
+		}
+		.cert-badge .cert-title {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem;
+		}
+		.cert-badge .cert-meta { font-size: 0.72rem; color: rgba(255,255,255,0.65); }
+		.cert-badge .cert-grade {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.8rem; font-weight: 700; color: #fff;
+			margin-top: 0.5rem;
+		}
+
+		/* CTA */
+		.cta-card {
+			background: linear-gradient(135deg, var(--crimson-dark), var(--crimson));
+			padding: 2rem; border-radius: 2px; text-align: center;
+		}
+		.cta-card h3 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.3rem; color: #fff; margin: 0 0 0.8rem;
+		}
+		.cta-card p { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin: 0 0 1.2rem; line-height: 1.6; }
+		.btn-cta {
+			display: inline-block; background: #fff; color: var(--crimson-dark);
+			font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+			padding: 0.7rem 1.5rem; border-radius: 2px; text-decoration: none;
+			font-weight: 600; transition: background 0.2s;
+		}
+		.btn-cta:hover { background: var(--silver-light); color: var(--crimson-dark); }
+
+		/* ── DARK USP STRIP ── */
+		.usp-strip {
+			background: linear-gradient(135deg, var(--dark) 0%, #2a0a12 100%);
+			padding: 5rem 3rem;
+		}
+		.usp-strip .section-label { color: rgba(200,205,214,0.4); }
+		.usp-grid {
+			max-width: 1100px; margin: 2rem auto 0;
+			display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem;
+		}
+		.usp-item {
+			border: 1px solid rgba(200,205,214,0.1);
+			border-top: 3px solid var(--crimson);
+			padding: 2rem; border-radius: 2px;
+			transition: background 0.3s;
+		}
+		.usp-item:hover { background: rgba(255,255,255,0.04); }
+		.usp-item h4 {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.3rem; color: var(--silver-light); margin: 0 0 0.8rem;
+		}
+		.usp-item p { font-size: 0.88rem; color: rgba(200,205,214,0.6); line-height: 1.75; }
+
+		/* ── FOOTER ── */
+		#footer.wrapper { background: var(--dark); padding: 4rem 3rem 2.5rem; }
+		#footer .title { color: rgba(200,205,214,0.45) !important; border-color: rgba(200,205,214,0.12) !important; }
+		#footer .title::before, #footer .title::after { border-color: rgba(200,205,214,0.12) !important; }
+		#footer input[type="text"], #footer input[type="email"], #footer textarea {
+			background: rgba(255,255,255,0.05) !important;
+			border: 1px solid rgba(200,205,214,0.2) !important; color: var(--silver-light) !important;
+		}
+		#footer input::placeholder, #footer textarea::placeholder { color: rgba(200,205,214,0.35) !important; }
+		#footer input[type="submit"].style1 { background: var(--crimson) !important; border: none !important; color: #fff !important; }
+		.feature-list.small h3 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--silver); }
+		.feature-list.small p, .feature-list.small a { color: rgba(200,205,214,0.6) !important; font-size: 0.88rem; }
+		.feature-list.small a:hover { color: var(--silver-light) !important; }
+		#copyright { border-top: 1px solid rgba(200,205,214,0.1) !important; }
+		#copyright li { color: rgba(200,205,214,0.35) !important; font-size: 0.78rem; }
+		#copyright a { color: rgba(200,205,214,0.5) !important; }
+
+		@keyframes fadeInUp {
+			from { opacity: 0; transform: translateY(24px); }
+			to   { opacity: 1; transform: translateY(0); }
+		}
+		.hero-text > * { animation: fadeInUp 0.7s ease both; }
+		.hero-text .eyebrow { animation-delay: 0.1s; }
+		.hero-text h1 { animation-delay: 0.2s; }
+		.hero-text .title-role { animation-delay: 0.3s; }
+		.hero-text p { animation-delay: 0.4s; }
+		.hero-tags { animation-delay: 0.5s; }
+
+		@media (max-width: 900px) {
+			.hero-inner { grid-template-columns: 1fr; }
+			.hero-photo { max-width: 220px; }
+			.about-main { grid-template-columns: 1fr; }
+			.usp-grid { grid-template-columns: 1fr; }
+			.timeline-item { grid-template-columns: 1fr; }
+			.timeline-item::before { display: none; }
+			.t-date { text-align: left; padding: 0; }
+		}
+	</style>
+</head>
+<body class="no-sidebar is-preload">
+<div id="page-wrapper">
+
+	<!-- Header -->
+	<section id="header" class="wrapper">
+		<div id="logo">
+			<h1><a href="index.html">STRABE</a></h1>
+			<p>Strategische Beratung · KI-gestützt · Ergebnisorientiert</p>
+		</div>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Startseite</a></li>
+				<li><a href="right-sidebar.html">Ergebnisse</a></li>
+				<li><a href="left-sidebar.html">Methodik</a></li>
+				<li><a href="no-sidebar.html">KI-Tools</a></li>
+				<li class="current"><a href="about.html">Über mich</a></li>
+				<li><a href="index.html#kontakt">Kontakt</a></li>
+			</ul>
+		</nav>
+	</section>
+
+	<!-- Hero -->
+	<div class="about-hero">
+		<div class="hero-inner">
+			<div class="hero-photo-wrap">
+				<img src="jan-natrup.jpg" alt="Jan Natrup – Gründer Strabe" class="hero-photo" />
+			</div>
+			<div class="hero-text">
+				<div class="eyebrow">Gründer & Inhaber · Strabe</div>
+				<h1><strong>Jan</strong> Natrup</h1>
+				<div class="title-role">Wirtschaftspsychologe · Stratege · Vertriebsexperte</div>
+				<p>
+					Ich verbinde wissenschaftlich fundierte Wirtschaftspsychologie mit echter Vertriebspraxis und modernen KI-Tools — um Selbständigen, KMUs und Coaches zu messbaren Ergebnissen zu verhelfen. Keine Theorie, die im Regal verstaubt. Nur das, was wirklich wirkt.
+				</p>
+				<p>
+					Aktuell studiere ich Wirtschaftspsychologie (B.Sc.) an der FH Südwestfalen und arbeite parallel im arbeits- und ingenieurpsychologischen Forschungslabor — wissenschaftliche Tiefe trifft auf unternehmerische Praxis.
+				</p>
+				<div class="hero-tags">
+					<span class="hero-tag">Wirtschaftspsychologie</span>
+					<span class="hero-tag">Vertrieb & Sales</span>
+					<span class="hero-tag">NLP-Coaching</span>
+					<span class="hero-tag">CRM & Automatisierung</span>
+					<span class="hero-tag">Entscheidungspsychologie</span>
+					<span class="hero-tag">KI-Strategie</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main Content -->
+	<div style="background: var(--off-white);">
+		<div class="about-main">
+
+			<!-- Left: Bio + Timeline -->
+			<div>
+				<div class="about-intro">
+					<div class="section-label">Meine Geschichte</div>
+					<h2>Warum ich Strabe gegründet habe</h2>
+					<p>
+						Seit Jahren beobachte ich dasselbe Muster: Unternehmer und Selbständige mit großartigen Produkten und echten Fähigkeiten, die dennoch nicht die Ergebnisse erzielen, die sie verdienen. Nicht weil sie nicht hart genug arbeiten — sondern weil entscheidende strategische Stellschrauben falsch eingestellt sind.
+					</p>
+					<p>
+						Als Wirtschaftspsychologe weiß ich: Die meisten unternehmerischen Probleme sind in Wahrheit Entscheidungsprobleme. Zu unklare Positionierung, falsche Preispsychologie, ineffiziente Verkaufskommunikation — das sind keine Talent-Fragen, sondern lösbare Strategie-Fragen.
+					</p>
+
+					<blockquote>
+						"Ich gründe Strabe, weil ich überzeugt bin: Mit dem richtigen Blick von außen, wissenschaftlicher Methodik und den richtigen KI-Werkzeugen kann jedes Business schneller und gezielter wachsen."
+					</blockquote>
+
+					<p>
+						Meine Kombination aus akademischer Ausbildung in Wirtschaftspsychologie, mehrjähriger Vertriebspraxis, NLP-Coaching-Zertifizierung und praktischer KI-Kompetenz erlaubt es mir, Probleme auf mehreren Ebenen gleichzeitig anzugehen — und echte, messbare Lösungen zu liefern.
+					</p>
+				</div>
+
+				<!-- Timeline -->
+				<div class="timeline">
+					<h3>Werdegang & Erfahrung</h3>
+
+					<div class="timeline-item">
+						<div class="t-date">Seit Okt. 2025</div>
+						<div class="t-content">
+							<h4>Studentischer Mitarbeiter · Forschungslabor</h4>
+							<div class="t-org">FH Südwestfalen · Arbeits- & Ingenieurpsychologie</div>
+							<p>Aktive Mitarbeit an Forschungsprojekten im Bereich Robotik. Planung und Durchführung von Experimenten, Versuchsdesign, Datenanalyse und wissenschaftliche Methodik. Enge Zusammenarbeit mit Professoren an innovativen Forschungsprojekten.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="t-date">Nov. 2024 – März 2025</div>
+						<div class="t-content">
+							<h4>Praktikum HR & Personalentwicklung</h4>
+							<div class="t-org">Interprint GmbH · Arnsberg</div>
+							<p>Konzeptionierung einer unternehmensweiten Feedbackgesprächs-Kultur, Entwicklung von Gesprächsleitfäden für Führungskräfte und Mitarbeiter, Implementierung neuer Software für Mitarbeitergespräche sowie Daten- und Fehlzeitenanalysen.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="t-date">Apr. – Juli 2024</div>
+						<div class="t-content">
+							<h4>Praktikum Sales & Customerservice</h4>
+							<div class="t-org">EQOH.de GmbH · E-Commerce Start-up</div>
+							<p>Eigenverantwortliche Leitung von Vertrieb und Kundenservice. Erfolgreiche Implementierung des CRM-Systems Pipedrive zur Effizienzsteigerung der Vertriebsprozesse sowie Entwicklung von Strategien zur Steigerung der Kundenzufriedenheit.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="t-date">Nov. 2022 – heute</div>
+						<div class="t-content">
+							<h4>Selbstständiger Vertrieb</h4>
+							<div class="t-org">Glasfaser & Fertighaus-Bauprojekte</div>
+							<p>Selbstständige Vertriebstätigkeit mit Spezialisierung auf Fertighäuser. Aufbau eines eigenen Kundenstamms, Online-Marketing und Social-Media-Management zur Reichweitensteigerung. Fundierte Praxiserfahrung in der unternehmerischen Selbstständigkeit.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="t-date">Aug. 2021 – Jan. 2022</div>
+						<div class="t-content">
+							<h4>Duales Studium Fitnessökonomie</h4>
+							<div class="t-org">IST Düsseldorf · Fusion5 Performance, Essen</div>
+							<p>Praxisnahe Grundlagen in Betriebsorganisation, Marketing und Kundenservice. Betreuung des Social-Media-Accounts und enge Zusammenarbeit mit Branchenexperten.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Ausbildung -->
+				<div class="timeline" style="margin-top: 3rem;">
+					<h3>Ausbildung</h3>
+
+					<div class="timeline-item">
+						<div class="t-date">Seit Apr. 2026</div>
+						<div class="t-content">
+							<h4>Wirtschaftsingenieurwesen B.Ing.</h4>
+							<div class="t-org">FH Südwestfalen · Meschede</div>
+							<p>Ergänzendes Studium zur Vertiefung technisch-wirtschaftlicher Kompetenz.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="t-date">Seit Okt. 2022</div>
+						<div class="t-content">
+							<h4>Wirtschaftspsychologie B.Sc.</h4>
+							<div class="t-org">FH Südwestfalen · Meschede · vsl. Abschluss 06/2026</div>
+							<p>Schwerpunkte: Entscheidungspsychologie, Organisationspsychologie, Markt- & Werbepsychologie, Verkaufsmanagement, Coaching. Ausgezeichnete Leistungen in Schlüsselkompetenzen (1,0) und Grundseminar Wirtschaftspsychologie (1,0).</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="t-date">2013 – 2021</div>
+						<div class="t-content">
+							<h4>Abitur · Note 2,0</h4>
+							<div class="t-org">Gymnasium Waldstraße · Hattingen</div>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Right Sidebar -->
+			<div class="about-sidebar">
+
+				<!-- Zertifikat -->
+				<div class="sidebar-card">
+					<h3>Zertifizierung</h3>
+					<div class="cert-badge">
+						<div class="cert-title">Ressourcenorientiertes Coaching in der Praxis</div>
+						<div class="cert-meta">NLP · DVNLP-Richtlinien · 36 Stunden</div>
+						<div class="cert-grade">Note 1,3</div>
+					</div>
+					<p style="font-size:0.82rem; color:#666; line-height:1.65; margin-top:0.8rem;">
+						NLP-Methodik, Meta-Modell der Sprache, Rapportaufbau, Entscheidungsfindung, Coaching-Rahmenmodell — zertifiziert nach DVNLP-Richtlinien.
+					</p>
+				</div>
+
+				<!-- Beste Studienleistungen -->
+				<div class="sidebar-card">
+					<h3>Studienleistungen (Auswahl)</h3>
+					<div class="grade-item">
+						<span class="g-subject">Schlüsselkompetenzen</span>
+						<span class="g-grade top">1,0</span>
+					</div>
+					<div class="grade-item">
+						<span class="g-subject">Grundseminar Wirtschaftspsychologie</span>
+						<span class="g-grade top">1,0</span>
+					</div>
+					<div class="grade-item">
+						<span class="g-subject">Sozial- & Persönlichkeitspsychologie</span>
+						<span class="g-grade top">1,3</span>
+					</div>
+					<div class="grade-item">
+						<span class="g-subject">NLP Coaching Zertifikat</span>
+						<span class="g-grade top">1,3</span>
+					</div>
+					<div class="grade-item">
+						<span class="g-subject">Psychologie des Entscheidens</span>
+						<span class="g-grade">1,7</span>
+					</div>
+					<div class="grade-item">
+						<span class="g-subject">Organisationspsychologie</span>
+						<span class="g-grade">1,7</span>
+					</div>
+					<div class="grade-item">
+						<span class="g-subject">Verkaufsmanagement</span>
+						<span class="g-grade">1,7</span>
+					</div>
+					<div class="grade-item">
+						<span class="g-subject">Markt- & Werbepsychologie</span>
+						<span class="g-grade">1,7</span>
+					</div>
+					<div class="grade-item">
+						<span class="g-subject">Marketing: Strategien & Instrumente</span>
+						<span class="g-grade">2,0</span>
+					</div>
+				</div>
+
+				<!-- Skills -->
+				<div class="sidebar-card">
+					<h3>Kompetenzen</h3>
+					<div class="skill-group">
+						<h4>Fachlich</h4>
+						<div class="skill-tags">
+							<span class="skill-tag">Vertrieb & Sales</span>
+							<span class="skill-tag">CRM (Pipedrive)</span>
+							<span class="skill-tag">NLP-Coaching</span>
+							<span class="skill-tag">Entscheidungspsychologie</span>
+							<span class="skill-tag">Organisationspsychologie</span>
+							<span class="skill-tag">Marktpsychologie</span>
+							<span class="skill-tag">Forschungsmethodik</span>
+							<span class="skill-tag">Agiles Projektmanagement</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h4>Digital & Tools</h4>
+						<div class="skill-tags">
+							<span class="skill-tag">KI-Tools (ChatGPT, Claude)</span>
+							<span class="skill-tag">Social Media</span>
+							<span class="skill-tag">CRM-Systeme</span>
+							<span class="skill-tag">Datenanalyse</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h4>Sprachen</h4>
+						<div class="lang-item">
+							<span>Deutsch</span><span class="lang-level">Muttersprache</span>
+						</div>
+						<div class="lang-item">
+							<span>Englisch</span><span class="lang-level">Fließend</span>
+						</div>
+						<div class="lang-item">
+							<span>Schwedisch</span><span class="lang-level">Grundlagen</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- CTA -->
+				<div class="cta-card">
+					<h3>Bereit für ein Gespräch?</h3>
+					<p>30 Minuten, kostenlos, unverbindlich — ich zeige Ihnen, was in Ihrem Business möglich ist.</p>
+					<a href="index.html#kontakt" class="btn-cta">Erstgespräch buchen</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- USP Strip -->
+	<div class="usp-strip">
+		<div style="max-width:1100px; margin:0 auto; text-align:center;">
+			<div class="section-label" style="color:rgba(200,205,214,0.4);">Was mich antreibt</div>
+		</div>
+		<div class="usp-grid">
+			<div class="usp-item">
+				<h4>Wissenschaft trifft Praxis</h4>
+				<p>Meine Beratung basiert nicht auf Bauchgefühl, sondern auf wissenschaftlich fundierten Erkenntnissen aus der Wirtschaftspsychologie — kombiniert mit echter Vertriebspraxis aus mehrjähriger Selbstständigkeit.</p>
+			</div>
+			<div class="usp-item">
+				<h4>Junge Perspektive, klarer Blick</h4>
+				<p>Als junger Unternehmer denke ich digital-first, kenne die neuesten KI-Tools aus dem Effeff und bringe einen frischen, unverstellten Blick auf Ihr Business — ohne eingefahrene Denkmuster.</p>
+			</div>
+			<div class="usp-item">
+				<h4>Volle Verantwortung</h4>
+				<p>Ich stehe mit meinem Namen für die Ergebnisse, die ich verspreche. Pilotkunden zahlen erfolgsabhängig — das ist mein persönliches Commitment zu jedem Mandat.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<section id="footer" class="wrapper">
+		<div class="title">Kontakt</div>
+		<div class="container">
+			<header class="style1" style="text-align:center; margin-bottom:3rem;">
+				<h2 style="font-family:'Cormorant Garamond',serif; font-size:2rem; color:var(--silver-light);">Lassen Sie uns sprechen.</h2>
+				<p style="color:rgba(200,205,214,0.6);">Das erste Gespräch ist kostenlos — melden Sie sich noch heute.</p>
+			</header>
+			<div class="row">
+				<div class="col-6 col-12-medium">
+					<section>
+						<form method="post" action="#">
+							<div class="row gtr-50">
+								<div class="col-6 col-12-small">
+									<input type="text" name="name" id="contact-name" placeholder="Ihr Name" />
+								</div>
+								<div class="col-6 col-12-small">
+									<input type="text" name="email" id="contact-email" placeholder="Ihre E-Mail" />
+								</div>
+								<div class="col-12">
+									<textarea name="message" id="contact-message" placeholder="Ihre Nachricht..." rows="4"></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" class="style1" value="Senden" /></li>
+										<li><input type="reset" class="style2" value="Zurücksetzen" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</section>
+				</div>
+				<div class="col-6 col-12-medium">
+					<section class="feature-list small">
+						<div class="row">
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-home">Anschrift</h3>
+									<p>Jan Natrup · Strabe<br />An der Pfannenschmiede 3a<br />45549 Sprockhövel</p>
+								</section>
+							</div>
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-envelope">E-Mail</h3>
+									<p><a href="mailto:Strabe@mein.gmx">Strabe@mein.gmx</a></p>
+								</section>
+							</div>
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-comment">Social</h3>
+									<p><a href="#">linkedin.com/strabe</a><br /><a href="#">@strabe-beratung</a></p>
+								</section>
+							</div>
+							<div class="col-6 col-12-small">
+								<section>
+									<h3 class="icon solid fa-clock">Reaktionszeit</h3>
+									<p>Innerhalb von 24 Stunden</p>
+								</section>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div id="copyright">
+				<ul>
+					<li>&copy; 2025 Jan Natrup · Strabe – Strategische Beratung</li>
+					<li><a href="impressum.html">Impressum</a></li>
+					<li><a href="#">Datenschutz</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
